@@ -1,9 +1,9 @@
 {
-    "name": "drupal/twig_deluxe",
+    "name": "alan-221b/twig-deluxe",
     "description": "Scoped CSS and JS for Drupal Twig templates — Vue/Svelte-style component isolation",
     "type": "drupal-module",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/twig_deluxe",
+    "homepage": "https://github.com/Alan-221b/drupal-twig-deluxe",
     "keywords": [
         "drupal",
         "twig",
