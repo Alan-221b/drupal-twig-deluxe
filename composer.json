@@ -1,0 +1,33 @@
+{
+    "name": "drupal/twig_deluxe",
+    "description": "Scoped CSS and JS for Drupal Twig templates — Vue/Svelte-style component isolation",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/twig_deluxe",
+    "keywords": [
+        "drupal",
+        "twig",
+        "scoped-css",
+        "component",
+        "theming"
+    ],
+    "authors": [
+        {
+            "name": "Alan",
+            "email": "alan@221b.fr"
+        }
+    ],
+    "require": {
+        "drupal/core": "^10 || ^11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\twig_deluxe\\": "src/"
+        }
+    },
+    "extra": {
+        "drupal": {
+            "module": "twig_deluxe"
+        }
+    }
+}

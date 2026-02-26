@@ -1,0 +1,7 @@
+name: 'Twig Deluxe'
+type: module
+description: 'A series of helpers to build better twig themes'
+package: Other
+core_version_requirement: ^10||^11
+dependencies:
+  - drupal:system

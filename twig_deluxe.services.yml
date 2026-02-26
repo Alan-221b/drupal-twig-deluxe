@@ -1,0 +1,12 @@
+services:
+  twig_deluxe.twig_extension:
+    class: Drupal\twig_deluxe\Twig\TwigDeluxeTwigExtension
+    arguments:
+      - '@twig.loader.theme_registry'
+      - '@config.factory'
+      - '@theme_handler'
+      - '@file_system'
+      - '@state'
+      - '@messenger'
+    tags:
+      - { name: twig.extension }

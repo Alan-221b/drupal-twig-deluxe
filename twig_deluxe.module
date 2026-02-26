@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Provides functionality for the Twig Deluxe module.
+ *
+ * This module enhances Twig templating capabilities in Drupal by adding
+ * additional features and development tools for improved template DX.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function twig_deluxe_page_attachments_alter(array &$attachments) {
+  // Add current parent hash map to front theme JS settings.
+  // Only if we are in twig development mode.
+  $twig_config = \Drupal::getContainer()->getParameter('twig.config');
+
+  if (!$twig_config['debug']) {
+    return;
+  }
+
+  // Generate parent hash map from the service.
+  /** @var \Drupal\twig_deluxe\Twig\TwigDeluxeTwigExtension $extension */
+  $extension = \Drupal::service('twig_deluxe.twig_extension');
+  $extension->processParentTree();
+  $parentTree = \Drupal::state()->get('twig_deluxe.parent_tree', []);
+
+  $attachments['#attached']['drupalSettings']['twigDeluxe']['parentTree'] = $parentTree;
+}
